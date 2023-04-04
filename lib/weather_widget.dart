@@ -45,13 +45,18 @@ class _WeatherWidgetState extends State<WeatherWidget> {
     return Scaffold(
       appBar: AppBar(
         title: TextField(
+          autofocus: true,
+          style: const TextStyle(color: Colors.white),
+          textCapitalization: TextCapitalization.words,
           controller: searchController,
-          decoration: const InputDecoration(
+          keyboardType: TextInputType.text,
+          enableSuggestions: true,
+          decoration: InputDecoration(
             hintText: 'Search City',
             hintStyle: TextStyle(
-              color: Colors.white,
+              color: Colors.blue.shade100,
             ),
-            icon: Icon(
+            icon: const Icon(
               Icons.search,
               color: Colors.white,
             ),
